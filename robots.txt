@@ -1,0 +1,366 @@
+Sitemap: https://Codefy.github.io/Codefy/Website English/Desktop/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+User-agent: GoogleOther
+Allow: /
+Crawl-delay: 2
+
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 2
+
+User-agent: Googlebot-News
+Allow: /
+Crawl-delay: 2
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 3
+
+User-agent: msnbot
+Allow: /
+Crawl-delay: 3
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 5
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: DuckAssistBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 10
+
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 5
+
+User-agent: Bard-User
+Allow: /
+Crawl-delay: 5
+
+User-agent: Google Bard
+Allow: /
+Crawl-delay: 5
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 2
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+Crawl-delay: 2
+
+User-agent: Amazonbot
+Allow: /
+Crawl-delay: 10
+
+User-agent: ia\archiver
+Allow: /
+Crawl-delay: 10
+
+User-agent: Applebot
+Allow: /
+Crawl-delay: 3
+
+User-agent: Applebot-News
+Allow: /
+Crawl-delay: 3
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Pinterestbot
+Allow: /
+Crawl-delay: 3
+
+User-agent: LinkedInbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Bytespider
+Allow: /
+Crawl-delay: 10
+
+User-agent: MistralAI-User/1.0
+Allow: /
+Crawl-delay: 10
+
+User-agent: Cohere-AI
+Allow: /
+Crawl-delay: 10
+
+User-agent: Cohere-training-data-crawler
+Allow: /
+Crawl-delay: 10
+
+User-agent: FeedFetcher-Google
+Allow: /
+Crawl-delay: 2
+
+User-agent: FeedlyBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Feedly/1.0
+Allow: /
+Crawl-delay: 5
+
+User-agent: Inoreader/1.0
+Allow: /
+Crawl-delay: 5
+
+User-agent: Feedspot
+Allow: /
+Crawl-delay: 10
+
+User-agent: NewsBlur
+Allow: /
+Crawl-delay: 10
+
+User-agent: Superfeedr bot/2.0
+Allow: /
+Crawl-delay: 5
+
+User-agent: FlipboardProxy
+Allow: /
+Crawl-delay: 5
+
+User-agent: FeedBurner/1.0
+Allow: /
+Crawl-delay: 2
+
+User-agent: SimplePie
+Allow: /
+Crawl-delay: 5
+
+User-agent: RSSOwl/2.0
+Allow: /
+Crawl-delay: 5
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SEMrushBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: Sogou spider
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: Harvest
+Disallow: /
+
+User-agent: ExtractorPro
+Disallow: /
+
+User-agent: ZmEu
+Disallow: /
+
+User-agent: Nikto
+Disallow: /
+
+User-agent: Acunetix
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: SEOkicks-Robot
+Disallow: /
+
+User-agent: MegaIndex.ru
+Disallow: /
+
+User-agent: Rogerbot
+Disallow: /
+
+User-agent: JetOctopus
+Disallow: /
+
+User-agent: Netpeak Spider
+Disallow: /
+
+User-agent: Botify
+Disallow: /
+
+User-agent: Lumar
+Disallow: /
+
+User-agent: Sitebulb Crawler
+Disallow: /
+
+User-agent: Screaming Frog
+Disallow: /
+
+User-agent: NaverBot
+Disallow: /
+
+User-agent: ExaBot
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: 360Spider
+Disallow: /
+
+User-agent: ShenmaBot
+Disallow: /
+
+User-agent: Apache Nutch
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+User-agent: OmgiliBot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: TurnitinBot
+Disallow: /
+
+User-agent: AwarioBot
+Disallow: /
+
+User-agent: CensysInspect
+Disallow: /
+
+User-agent: Expanse
+Disallow: /
+
+User-agent: internet-measurement
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: BW/1.1
+Disallow: /
+
+User-agent: Dalvik/2.1.0
+Disallow: /
+
+User-agent: Dataprovider
+Disallow: /
+
+User-agent: Empty user agent
+Disallow: /
+
+User-agent: Go-http-client
+Disallow: /
+
+User-agent: IonCrawl
+Disallow: /
+
+User-agent: Java
+Disallow: /
+
+User-agent: Mozlila
+Disallow: /
+
+User-agent: Orbbot
+Disallow: /
+
+User-agent: peer39_crawler
+Disallow: /
+
+User-agent: python-requests
+Disallow: /
+
+User-agent: VelenPublicWebCrawler
+Disallow: /
+
+User-agent: wp_is_mobile
+Disallow: /
+
+User-agent: Zoominfobot
+Disallow: /
+
+User-agent: TeleportBot
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: Larbin
+Disallow: /
+
+User-agent: MSIECrawler
+Disallow: /
+
+User-agent: PanguBot
+Disallow: /
+
+User-agent: *
+Disallow: /

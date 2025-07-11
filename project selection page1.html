@@ -1,0 +1,2528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codefy - frontpage</title>
+    <style>
+        /* Reset some basic elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        .navbar {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            padding: 0 1rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+
+        .ad-space1 {
+            width: 728px;
+            height: 90px;
+            background-color: #f8f8f8;
+            border: 1px dashed #ccc;
+            position: absolute;
+            top: 75px;
+            left: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .ad-space1:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .ad-link1 {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ad-link1:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .ad-space2 {
+            width: 728px;
+            height: 90px;
+            background-color: #f8f8f8;
+            border: 1px dashed #ccc;
+            position: absolute;
+            top: 4400px;
+            left: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .ad-space2:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .ad-link2 {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ad-link2:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .content-section {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../Images/Hjemmeside_baggrund1_JPG_kontrast.jpg') center/cover no-repeat;
+            color: white;
+        }
+        
+        .container {
+            position: relative;
+            max-width: 1536px;
+            height: 4300px;
+        }
+        
+        .content-part {
+            position: absolute;
+            padding: 1rem;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .part1 {
+            font-size: 2.5rem;
+            width: 80%;
+            top: 20px;
+            left: 640px;
+        }
+
+        .part2 {
+            font-size: 1.1rem;
+            width: 30%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 120px;
+            left: 520px;
+        }
+
+        .part3 {
+            font-size: 1.1rem;
+            width: 30%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 200px;
+            left: 520px;
+        }
+
+        .part4 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 500px;
+            left: 180px;
+        }
+
+        .part5 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 500px;
+            left: 585px;
+        }
+
+        .part6 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 500px;
+            left: 985px;
+        }
+
+        .part7 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 1000px;
+            left: 180px;
+        }
+
+        .part8 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 1000px;
+            left: 585px;
+        }
+
+        .part9 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 1000px;
+            left: 985px;
+        }
+
+        .part10 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 1500px;
+            left: 180px;
+        }
+
+        .part11 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 1500px;
+            left: 585px;
+        }
+
+        .part12 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 1500px;
+            left: 985px;
+        }
+
+        .part13 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 2000px;
+            left: 180px;
+        }
+
+        .part14 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 2000px;
+            left: 585px;
+        }
+
+        .part15 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 2000px;
+            left: 985px;
+        }
+
+        .part16 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 2500px;
+            left: 180px;
+        }
+
+        .part17 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 2500px;
+            left: 585px;
+        }
+
+        .part18 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 2500px;
+            left: 985px;
+        }
+
+        .part19 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 3000px;
+            left: 180px;
+        }
+
+        .part20 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 3000px;
+            left: 585px;
+        }
+
+        .part21 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 3000px;
+            left: 985px;
+        }
+
+        .part22 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 3500px;
+            left: 180px;
+        }
+
+        .part23 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 3500px;
+            left: 585px;
+        }
+
+        .part24 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 3500px;
+            left: 985px;
+        }
+
+        .part25 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 4000px;
+            left: 180px;
+        }
+
+        .part26 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 4000px;
+            left: 585px;
+        }
+
+        .part27 {
+            font-size: 1.1rem;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 4000px;
+            left: 985px;
+        }
+
+        .button-class1 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 640px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class2 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 640px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class3 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 700px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class4 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 700px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class5 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 640px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class6 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 640px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class7 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 700px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class8 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 700px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class9 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 640px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class10 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 640px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class11 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 700px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class12 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 700px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class13 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1140px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class14 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1140px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class15 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1200px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class16 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1200px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class17 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1140px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class18 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1140px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class19 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1200px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class20 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1200px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class21 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1140px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class22 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1140px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class23 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1200px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class24 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1200px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class25 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1640px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class26 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1640px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class27 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1700px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class28 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1700px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class29 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1640px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class30 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1640px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class31 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1700px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class32 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1700px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class33 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1640px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class34 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1640px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class35 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1700px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class36 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 1700px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class37 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2140px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class38 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2140px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class39 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2200px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class40 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2200px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class41 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2140px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class42 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2140px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class43 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2200px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class44 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2200px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class45 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2140px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class46 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2140px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class47 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2200px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class48 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2200px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class49 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2640px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class50 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2640px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class51 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2700px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class52 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2700px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class53 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2640px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class54 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2640px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class55 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2700px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class56 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2700px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class57 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2640px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class58 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2640px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class59 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2700px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class60 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 2700px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class61 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3140px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class62 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3140px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class63 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3200px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class64 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3200px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class65 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3140px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class66 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3140px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class67 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3200px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class68 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3200px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class69 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3140px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class70 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3140px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class71 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3200px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class72 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3200px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class73 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3640px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class74 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3640px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class75 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3700px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class76 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3700px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class77 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3640px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class78 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3640px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class79 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3700px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class80 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3700px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class81 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3640px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class82 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3640px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class83 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3700px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class84 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 3700px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class85 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4140px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class86 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4140px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class87 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4200px;
+                left: 120px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class88 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4200px;
+                left: 350px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class89 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4140px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class90 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4140px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class91 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4200px;
+                left: 565px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class92 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4200px;
+                left: 795px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class93 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4140px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class94 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4140px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class95 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4200px;
+                left: 1000px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class96 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4200px;
+                left: 1230px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        .button-class97 {
+		background-color: #4CAF50;
+                position: absolute;
+                top: 4275px;
+                left: 1200px;
+		border: none;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 4px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .my-image1 {
+            position: absolute;
+            top: 300px;
+            left: 250px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image2 {
+            position: absolute;
+            top: 300px;
+            left: 650px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image3 {
+            position: absolute;
+            top: 300px;
+            left: 1050px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image4 {
+            position: absolute;
+            top: 800px;
+            left: 250px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image5 {
+            position: absolute;
+            top: 800px;
+            left: 650px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image6 {
+            position: absolute;
+            top: 800px;
+            left: 1050px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image7 {
+            position: absolute;
+            top: 1300px;
+            left: 250px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image8 {
+            position: absolute;
+            top: 1300px;
+            left: 650px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image9 {
+            position: absolute;
+            top: 1300px;
+            left: 1050px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image10 {
+            position: absolute;
+            top: 1800px;
+            left: 250px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image11 {
+            position: absolute;
+            top: 1800px;
+            left: 650px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image12 {
+            position: absolute;
+            top: 1800px;
+            left: 1050px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image13 {
+            position: absolute;
+            top: 2300px;
+            left: 250px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image14 {
+            position: absolute;
+            top: 2300px;
+            left: 650px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image15 {
+            position: absolute;
+            top: 2300px;
+            left: 1050px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image16 {
+            position: absolute;
+            top: 2800px;
+            left: 250px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image17 {
+            position: absolute;
+            top: 2800px;
+            left: 650px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image18 {
+            position: absolute;
+            top: 2800px;
+            left: 1050px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image19 {
+            position: absolute;
+            top: 3300px;
+            left: 250px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image20 {
+            position: absolute;
+            top: 3300px;
+            left: 650px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image21 {
+            position: absolute;
+            top: 3300px;
+            left: 1050px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image22 {
+            position: absolute;
+            top: 3800px;
+            left: 250px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image23 {
+            position: absolute;
+            top: 3800px;
+            left: 650px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image24 {
+            position: absolute;
+            top: 3800px;
+            left: 1050px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image25 {
+            position: absolute;
+            bottom: 0px;
+            right: 200px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .footer {
+            background-color: #333;
+            border-top: 1px solid #e0e0e0;
+            padding: 40px 20px;
+            position: relative;
+            min-height: 200px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            height: 120px;
+        }
+
+        .footer-element {
+            position: absolute;
+        }
+
+        .codefy-title {
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .translate-btn {
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .translate-btn:hover {
+            background-color: #45a049;
+        }
+
+        .sitemap-btn {
+            top: 85px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sitemap-btn:hover {
+            background-color: #45a049;
+        }
+
+        .device-image {
+            top: 40px;
+            right: 200px;
+            width: 100px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .device-text {
+            top: 0px;
+            right: 20px;
+            font-size: 14px;
+            color: white;
+            max-width: 160px;
+            line-height: 1.4;
+        }
+
+        .phone-btn {
+            top: 5px;
+            right: -90px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 5px;
+        }
+
+        .phone-btn:hover {
+            background-color: #45a049;
+        }
+
+        .tablet-btn {
+            top: 45px;
+            right: -90px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tablet-btn:hover {
+            background-color: #45a049;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Codefy</div>
+        <ul class="nav-links">
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="about me page.htm">About me</a></li>
+            <li><a href="project main page.htm">Project page</a></li>
+            <li><a href="buy advertising page.htm">Buy advertising</a></li>
+            <li><a href="software and sources page.htm">Software and sources</a></li>
+        </ul>
+    </nav>
+<div class="ad-space1">
+        <a href="buy advertising page.htm" class="ad-link1">Want to advertise? Click here!</a>
+    </div>
+    <section class="content-section">
+        <div class="container">
+            <p class="content-part part1">Projects</h1>
+            <p class="content-part part2">Selected project category: Programming projects</p> 
+            <p class="content-part part3">Choose the project you are interested in below</p>
+            <p class="content-part part4">Car and motorcycle rental company created in Python 🐍</p>
+            <p class="content-part part5">Whisky distillery storage management system created in Java ☕</p>
+            <p class="content-part part6">Bakery shop queuing system created in Golang 🐹</p>
+            <p class="content-part part7">Restaurant reservation system created in C 🌊</p>
+            <p class="content-part part8">Cinema ticket purchase system created using Bubble.io 💬</p>
+            <p class="content-part part9">Clothing store storage management system created in Java ☕</p>
+            <p class="content-part part10">Grocery store webshop created in PHP 🐘</p>
+            <p class="content-part part11">Cafe mobile app shop created using Bubble.io 💬</p>
+            <p class="content-part part12">Travel booking system created using Bubble.io 💬</p>
+            <p class="content-part part13">Online casino created in Golang 🐹</p>
+            <p class="content-part part14">Bar and night club application created using Mendix.com 🗺</p>
+            <p class="content-part part15">Padeltennis club webapplication created in PHP 🐘</p>
+            <p class="content-part part16">Fitness club application created using Mendix.com 🗺</p>
+            <p class="content-part part17">Campsite booking system created in Python 🐍</p>
+            <p class="content-part part18">Hotel room reservation system created in Python 🐍</p>
+            <p class="content-part part19">Online news site created using Bubble.io 💬</p>
+            <p class="content-part part20">Winery storage management system created in C# 🎵</p>
+            <p class="content-part part21">Farm harvest optimization system created in Prolog 🔍</p>
+            <p class="content-part part22">Online clothing store webshop created in PHP 🐘</p>
+            <p class="content-part part23">Online bike store webshop created in PHP 🐘</p>
+            <p class="content-part part24">Online print on demand store webshop created in Python 🐍</p>
+            <p class="content-part part25">Golf course booking system created in Python 🐍</p>
+            <p class="content-part part26">Theatre ticket purchase system created in PHP 🐘</p>
+            <p class="content-part part27">Bowling alley booking system created in Python 🐍</p>
+
+            <a href="car and motorcycle rental blog page1.htm" class="button-class1">Click here for blog post</a>
+            <a href="car and motorcycle rental video page1.htm" class="button-class2">Click here for video</a>
+            <a href="car and motorcycle rental infographic page1.htm" class="button-class3">Click here for infographic</a>
+            <a href="car and motorcycle rental podcast page1.htm" class="button-class4">Click here for podcast</a>
+            <a href="whisky distillery blog page1.htm" class="button-class5">Click here for blog post</a>
+            <a href="whisky distillery video page1.htm" class="button-class6">Click here for video</a>
+            <a href="whisky distillery infographic page1.htm" class="button-class7">Click here for infographic</a>
+            <a href="whisky distillery podcast page1.htm" class="button-class8">Click here for podcast</a>
+            <a href="bakery shop blog page1.htm" class="button-class9">Click here for blog post</a>
+            <a href="bakery shop video page1.htm" class="button-class10">Click here for video</a>
+            <a href="bakery shop infographic page1.htm" class="button-class11">Click here for infographic</a>
+            <a href="bakery shop podcast page1.htm" class="button-class12">Click here for podcast</a>
+            <a href="restaurant reservation blog page1.htm" class="button-class13">Click here for blog post</a>
+            <a href="restaurant reservation video page1.htm" class="button-class14">Click here for video</a>
+            <a href="restaurant reservation infographic page1.htm" class="button-class15">Click here for infographic</a>
+            <a href="restaurant reservation podcast page1.htm" class="button-class16">Click here for podcast</a>
+            <a href="cinema ticket purchase blog page1.htm" class="button-class17">Click here for blog post</a>
+            <a href="cinema ticket purchase video page1.htm" class="button-class18">Click here for video</a>
+            <a href="cinema ticket purchase infographic page1.htm" class="button-class19">Click here for infographic</a>
+            <a href="cinema ticket purchase podcast page1.htm" class="button-class20">Click here for podcast</a>
+            <a href="clothing store storage page1.htm" class="button-class21">Click here for blog post</a>
+            <a href="clothing store storage video page1.htm" class="button-class22">Click here for video</a>
+            <a href="clothing store storage infographic page1.htm" class="button-class23">Click here for infographic</a>
+            <a href="clothing store storage podcast page1.htm" class="button-class24">Click here for podcast</a>
+            <a href="grocery store blog page1.htm" class="button-class25">Click here for blog post</a>
+            <a href="grocery store video page1.htm" class="button-class26">Click here for video</a>
+            <a href="grocery store infographic page1.htm" class="button-class27">Click here for infographic</a>
+            <a href="grocery store podcast page1.htm" class="button-class28">Click here for podcast</a>
+            <a href="cafe blog page1.htm" class="button-class29">Click here for blog post</a>
+            <a href="cafe video page1.htm" class="button-class30">Click here for video</a>
+            <a href="cafe infographic page1.htm" class="button-class31">Click here for infographic</a>
+            <a href="cafe podcast page1.htm" class="button-class32">Click here for podcast</a>
+            <a href="travel booking blog page1.htm" class="button-class33">Click here for blog post</a>
+            <a href="travel booking video page1.htm" class="button-class34">Click here for video</a>
+            <a href="travel booking infographic page1.htm" class="button-class35">Click here for infographic</a>
+            <a href="travel booking podcast page1.htm" class="button-class36">Click here for podcast</a>
+            <a href="online casino blog page1.htm" class="button-class37">Click here for blog post</a>
+            <a href="online casino video page1.htm" class="button-class38">Click here for video</a>
+            <a href="online casino infographic page1.htm" class="button-class39">Click here for infographic</a>
+            <a href="online casino podcast page1.htm" class="button-class40">Click here for podcast</a>
+            <a href="bar and night club blog page1.htm" class="button-class41">Click here for blog post</a>
+            <a href="bar and night club video page1.htm" class="button-class42">Click here for video</a>
+            <a href="bar and night club infographic page1.htm" class="button-class43">Click here for infographic</a>
+            <a href="bar and night club podcast page1.htm" class="button-class44">Click here for podcast</a>
+            <a href="padeltennis club blog page1.htm" class="button-class45">Click here for blog post</a>
+            <a href="padeltennis club video page1.htm" class="button-class46">Click here for video</a>
+            <a href="padeltennis club infographic page1.htm" class="button-class47">Click here for infographic</a>
+            <a href="padeltennis club podcast page1.htm" class="button-class48">Click here for podcast</a>
+            <a href="fitness club blog page1.htm" class="button-class49">Click here for blog post</a>
+            <a href="fitness club video page1.htm" class="button-class50">Click here for video</a>
+            <a href="fitness club infographic page1.htm" class="button-class51">Click here for infographic</a>
+            <a href="fitness club podcast page1.htm" class="button-class52">Click here for podcast</a>
+            <a href="campsite booking blog page1.htm" class="button-class53">Click here for blog post</a>
+            <a href="campsite booking video page1.htm" class="button-class54">Click here for video</a>
+            <a href="campsite booking infographic page1.htm" class="button-class55">Click here for infographic</a>
+            <a href="campsite booking podcast page1.htm" class="button-class56">Click here for podcast</a>
+            <a href="hotel room blog page1.htm" class="button-class57">Click here for blog post</a>
+            <a href="hotel room video page1.htm" class="button-class58">Click here for video</a>
+            <a href="hotel room infographic page1.htm" class="button-class59">Click here for infographic</a>
+            <a href="hotel room podcast page1.htm" class="button-class60">Click here for podcast</a>
+            <a href="online news site blog page1.htm" class="button-class61">Click here for blog post</a>
+            <a href="online news site video page1.htm" class="button-class62">Click here for video</a>
+            <a href="online news site infographic page1.htm" class="button-class63">Click here for infographic</a>
+            <a href="online news site podcast page1.htm" class="button-class64">Click here for podcast</a>
+            <a href="winery storage blog page1.htm" class="button-class65">Click here for blog post</a>
+            <a href="winery storage video page1.htm" class="button-class66">Click here for video</a>
+            <a href="winery storage infographic page1.htm" class="button-class67">Click here for infographic</a>
+            <a href="winery storage podcast page1.htm" class="button-class68">Click here for podcast</a>
+            <a href="farm harvest blog page1.htm" class="button-class69">Click here for blog post</a>
+            <a href="farm harvest video page1.htm" class="button-class70">Click here for video</a>
+            <a href="farm harvest infographic page1.htm" class="button-class71">Click here for infographic</a>
+            <a href="farm harvest podcast page1.htm" class="button-class72">Click here for podcast</a>
+            <a href="online clothing store webshop blog page1.htm" class="button-class73">Click here for blog post</a>
+            <a href="online clothing store webshop video page1.htm" class="button-class74">Click here for video</a>
+            <a href="online clothing store webshop infographic page1.htm" class="button-class75">Click here for infographic</a>
+            <a href="online clothing store webshop podcast page1.htm" class="button-class76">Click here for podcast</a>
+            <a href="online bike store blog page1.htm" class="button-class77">Click here for blog post</a>
+            <a href="online bike store video page1.htm" class="button-class78">Click here for video</a>
+            <a href="online bike store infographic page1.htm" class="button-class79">Click here for infographic</a>
+            <a href="online bike store podcast page1.htm" class="button-class80">Click here for podcast</a>
+            <a href="online print on demand store blog page1.htm" class="button-class81">Click here for blog post</a>
+            <a href="online print on demand store video page1.htm" class="button-class82">Click here for video</a>
+            <a href="online print on demand store infographic page1.htm" class="button-class83">Click here for infographic</a>
+            <a href="online print on demand store podcast page1.htm" class="button-class84">Click here for podcast</a>
+            <a href="golf course blog page1.htm" class="button-class85">Click here for blog post</a>
+            <a href="golf course video page1.htm" class="button-class86">Click here for video</a>
+            <a href="golf course infographic page1.htm" class="button-class87">Click here for infographic</a>
+            <a href="golf course podcast page1.htm" class="button-class88">Click here for podcast</a>
+            <a href="theatre ticket purchase blog page1.htm" class="button-class89">Click here for blog post</a>
+            <a href="theatre ticket purchase video page1.htm" class="button-class90">Click here for video</a>
+            <a href="theatre ticket purchase infographic page1.htm" class="button-class91">Click here for infographic</a>
+            <a href="theatre ticket purchase podcast page1.htm" class="button-class92">Click here for podcast</a>
+            <a href="bowling alley blog page1.htm" class="button-class93">Click here for blog post</a>
+            <a href="bowling alley video page1.htm" class="button-class94">Click here for video</a>
+            <a href="bowling alley infographic page1.htm" class="button-class95">Click here for infographic</a>
+            <a href="bowling alley podcast page1.htm" class="button-class96">Click here for podcast</a>
+            <a href="project selection page2.htm" class="button-class97">Go to project page 2 here -></a>
+
+            <img src="../Images/Bil og motorcykel udlejning.png" alt="Car and motorcycle" class="my-image1">
+            <img src="../Images/Whisky destilleri.png" alt="Whisky cask and whisky bottle" class="my-image2">
+            <img src="../Images/Bageri.png" alt="Bakery shop" class="my-image3">
+            <img src="../Images/Restaurant.png" alt="Plate, fork and spoon" class="my-image4">
+            <img src="../Images/Biograf.png" alt="Popcorn bowl and soda in a plastic glass" class="my-image5">
+            <img src="../Images/Tøjbutik.png" alt="Stacks of blue t-shirts" class="my-image6">
+            <img src="../Images/Fødevarebutik.png" alt="Grocery bag filled with food" class="my-image7">
+            <img src="../Images/Cafe.png" alt="Cake on a plate and a coffee mug" class="my-image8">
+            <img src="../Images/Rejsebureau.png" alt="A plane flying over an island" class="my-image9">
+            <img src="../Images/Online kasino.png" alt="Roulette wheel" class="my-image10">
+            <img src="../Images/Bar og natklub.png" alt="Cocktail drink and a pair of dice" class="my-image11">
+            <img src="../Images/Padeltennis.png" alt="Padeltennis racket" class="my-image12">
+            <img src="../Images/Fitness center.png" alt="A person flexing his arm muscles" class="my-image13">
+            <img src="../Images/Campingplads.png" alt="A tent and a campfire" class="my-image14">
+            <img src="../Images/Hotel.png" alt="Hotel building" class="my-image15">
+            <img src="../Images/Online nyhedsmedie.png" alt="News article" class="my-image16">
+            <img src="../Images/Vingård.png" alt="Two bottles of wine and a wine glass" class="my-image17">
+            <img src="../Images/Gård.png" alt="A cultivated field" class="my-image18">
+            <img src="../Images/Online tøjbutik.png" alt="A pair of pants, a t-shirt and a pair of shoes" class="my-image19">
+            <img src="../Images/Online cykelbutik.png" alt="Two bicycles" class="my-image20">
+            <img src="../Images/Online plakat og kunstbutik.png" alt="A store selling print on demand items" class="my-image21">
+            <img src="../Images/Golfbane.png" alt="Golf course" class="my-image22">
+            <img src="../Images/Teater.png" alt="A theatre hall" class="my-image23">
+            <img src="../Images/Bowling center.png" alt="A bowling ball knocking over bowling pins" class="my-image24">
+
+</div>
+<div class="ad-space2">
+        <a href="buy advertising page.htm" class="ad-link2">Want to advertise? Click here!</a>
+    </div>
+    </section>
+ <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-element codefy-title">Codefy 2025</div>
+            <button class="footer-element translate-btn">Translate this page to Danish</button>
+            <button class="footer-element sitemap-btn">HTML sitemap</button>
+
+            <img src="../Images/Valg af skærmstørrelse.png" alt="Choose your screen size" class="my-image25">
+            <div class="footer-element device-text">
+                Are you visiting my site using a phone or tablet?<br>
+                Click on the respective button to the right!
+            </div>
+            <button class="footer-element phone-btn">Phone view</button>
+            <button class="footer-element tablet-btn">Tablet view</button>
+        </div>
+</footer>
+</body>
+</html>

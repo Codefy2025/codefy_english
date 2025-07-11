@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codefy - frontpage</title>
+    <style>
+        /* Reset some basic elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        .navbar {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            padding: 0 1rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+
+        .ad-space1 {
+            width: 728px;
+            height: 90px;
+            background-color: #f8f8f8;
+            border: 1px dashed #ccc;
+            position: absolute;
+            top: 75px;
+            left: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .ad-space1:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .ad-link1 {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ad-link1:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .ad-space2 {
+            width: 728px;
+            height: 90px;
+            background-color: #f8f8f8;
+            border: 1px dashed #ccc;
+            position: absolute;
+            top: 1000px;
+            left: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .ad-space2:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .ad-link2 {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ad-link2:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .content-section {
+            min-height: 80vh;
+            padding: 4rem 2rem;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../Images/Hjemmeside_baggrund1_JPG_kontrast.jpg') center/cover no-repeat;
+            color: white;
+        }
+        
+        .container {
+            position: relative;
+            max-width: 1536px;
+            height: 900px;
+        }
+        
+        .content-part {
+            position: absolute;
+            padding: 1rem;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .part1 {
+            font-size: 2.5rem;
+            width: 80%;
+            top: 20px;
+            left: 620px;
+        }
+
+        .part2 {
+            font-size: 1.1rem;
+            width: 35%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 120px;
+            left: 550px;
+        }
+
+        .part3 {
+            font-size: 1.1rem;
+            width: 40%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 300px;
+            left: 200px;
+        }
+
+        .part4 {
+            font-size: 1.1rem;
+            width: 35%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 300px;
+            left: 970px;
+        }
+
+        .part4 > p {
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .part4 ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .part4 li {
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .part4 li::marker {
+            color: #007acc;
+        }
+
+        .part5 {
+            font-size: 1.1rem;
+            width: 40%;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: 755px;
+            left: 450px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .my-image1 {
+            position: absolute;
+            top: 110px;
+            left: 300px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image2 {
+            position: absolute;
+            top: 300px;
+            left: 30px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image3 {
+            position: absolute;
+            top: 300px;
+            left: 800px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .my-image4 {
+            position: absolute;
+            top: 0px;
+            right: 200px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .footer {
+            background-color: #333;
+            border-top: 1px solid #e0e0e0;
+            padding: 40px 20px;
+            position: relative;
+            min-height: 200px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            height: 120px;
+        }
+
+        .footer-element {
+            position: absolute;
+        }
+
+        .codefy-title {
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .translate-btn {
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .translate-btn:hover {
+            background-color: #45a049;
+        }
+
+        .sitemap-btn {
+            top: 85px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sitemap-btn:hover {
+            background-color: #45a049;
+        }
+
+        .device-image {
+            top: 40px;
+            right: 200px;
+            width: 100px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .device-text {
+            top: 0px;
+            right: 20px;
+            font-size: 14px;
+            color: white;
+            max-width: 160px;
+            line-height: 1.4;
+        }
+
+        .phone-btn {
+            top: 5px;
+            right: -90px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 5px;
+        }
+
+        .phone-btn:hover {
+            background-color: #45a049;
+        }
+
+        .tablet-btn {
+            top: 45px;
+            right: -90px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tablet-btn:hover {
+            background-color: #45a049;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Codefy</div>
+        <ul class="nav-links">
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="about me page.htm">About me</a></li>
+            <li><a href="project main page.htm">Project page</a></li>
+            <li><a href="buy advertising page.htm">Buy advertising</a></li>
+            <li><a href="software and sources page.htm">Software and sources</a></li>
+        </ul>
+    </nav>
+<div class="ad-space1">
+        <a href="buy advertising page.htm" class="ad-link1">Want to advertise? Click here!</a>
+    </div>
+    <section class="content-section">
+        <div class="container">
+            <p class="content-part part1">About me</h1>
+            <p class="content-part part2">A little about me: First name: Niklas. Age: 32. Living in Denmark</p> 
+            <p class="content-part part3">Hello. Welcome to my little space of the internet! As a former student of construction management and planning, financial controlling and now computer science, I have now decided to share my wisdom with you all. I am - in my own words - a bit of a tech geek and "left-handed", meaning I can find solutions for problems that others have not throught of through the use of technology. All thanks to my varied knowledge - I am a jack of all trades, master of none kind of guy. </p>
+<div class="content-part part4">
+        <p>My goals with this site are to:</p>
+        <ul>
+            <li>Hopefully help you all with advice and/or solutions to various software development problems</li>
+            <li>To inspire you with ideas for your next side projects</li>
+            <li>To help newcomers into the world of it and software development</li>
+            <li>To provide my knowledge for free (no more pesky paywalls! Through I'll always appreciate a share and/or a donation!)</li>
+            <li>To challenge myself meaning creating something that can be shared with the world and being useful for a lot of people</li>
+        </ul>
+    </div>
+
+<p class="content-part part5">So are you ready? Then check out my projects. I will continuously add new content and edit existing content.</p>
+
+            <img src="../Images/Avatar til hjemmeside.png" alt="My avatar" class="my-image1">
+            <img src="../Images/Om mig.png" alt="About me" class="my-image2">
+            <img src="../Images/Mål med hjemmeside.png" alt="My website goals" class="my-image3">
+
+</div>
+<div class="ad-space2">
+        <a href="buy advertising page.htm" class="ad-link2">Want to advertise? Click here!</a>
+    </div>
+    </section>
+ <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-element codefy-title">Codefy 2025</div>
+            <button class="footer-element translate-btn">Translate this page to Danish</button>
+            <button class="footer-element sitemap-btn">HTML sitemap</button>
+
+            <img src="../Images/Valg af skærmstørrelse.png" alt="Choose your screen size" class="my-image4">
+            <div class="footer-element device-text">
+                Are you visiting my site using a phone or tablet?<br>
+                Click on the respective button to the right!
+            </div>
+            <button class="footer-element phone-btn">Phone view</button>
+            <button class="footer-element tablet-btn">Tablet view</button>
+        </div>
+</footer>
+</body>
+</html>

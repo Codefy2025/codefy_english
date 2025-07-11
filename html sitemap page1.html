@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codefy - frontpage</title>
+    <style>
+        /* Reset some basic elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        /* Navigation bar styling */
+        .navbar {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            padding: 0 1rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+        
+        /* Main content */
+        .content-section {
+            min-height: 80vh;
+            padding: 4rem 2rem;
+            /* Background image setup - replace with your own image path */
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/Hjemmeside_baggrund1_JPG_kontrast.jpg') center/cover no-repeat;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+.tree {
+            width: 100%;
+            overflow: auto;
+            padding: 20px 0;
+        }
+        
+        /* Tree structure */
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            transition: all 0.5s;
+            list-style-type: none;
+        }
+        
+        .tree li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+        }
+        
+        /* Lines */
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 1px solid #ccc;
+            width: 50%;
+            height: 20px;
+        }
+        
+        .tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 1px solid #ccc;
+        }
+        
+        /* Remove left-right connectors from single child */
+        .tree li:only-child::after, .tree li:only-child::before {
+            display: none;
+        }
+        
+        /* Remove space from single child */
+        .tree li:only-child {
+            padding-top: 0;
+        }
+        
+        /* Root level horizontal connections */
+        .tree > ul {
+            position: relative;
+        }
+        
+        .tree > ul::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 10%;
+            right: 10%;
+            border-top: 1px solid #888;
+            z-index: -1;
+        }
+        
+        /* Vertical connections from parent to children */
+        .tree li {
+            position: relative;
+        }
+        
+        .tree li ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 1px solid #888;
+            height: 20px;
+            width: 0;
+        }
+        
+        .tree li:last-child::before {
+            border-right: 1px solid #ccc;
+            border-radius: 0 5px 0 0;
+        }
+        
+        .tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+        
+        /* Nodes */
+        .tree li a {
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            display: inline-block;
+            background-color: white;
+            border-radius: 5px;
+            transition: all 0.3s;
+            min-width: 120px;
+        }
+        
+        /* Hover effect */
+        .tree li a:hover, .tree li a:focus {
+            background: #eee;
+            color: #000;
+            border: 1px solid #aaa;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+        
+        /* Level colors */
+        .tree li a.level-1 {
+            background-color: #4285f4;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .tree li a.level-2 {
+            background-color: #34a853;
+            color: white;
+        }
+        
+        .tree li a.level-3 {
+            background-color: #fbbc05;
+        }
+        
+        .tree li a.level-4 {
+            background-color: #ea4335;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Codefy</div>
+        <ul class="nav-links">
+            <li><a href="Frontpage.htm">Home</a></li>
+            <li><a href="About me.htm">About me</a></li>
+            <li><a href="Project page.htm">Project page</a></li>
+            <li><a href="Buy advertising page.htm">Buy advertising</a></li>
+            <li><a href="Software and sources page.htm">Software and sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <h1 class="section-title">HTML sitemap</h1>
+            <p>On this page you can find all the pages on the blog</p>
+        </div>
+<div class="tree">
+        <ul>
+            <li>
+                <a href="Frontpage.htm" class="level-1">Home</a>
+            </li>
+            <li>
+                <a href="About me page.htm" class="level-1">About me</a>
+            </li>
+            <li>
+                <a href="Project page.htm" class="level-1">Projects</a>
+                <ul>
+                    <li><a href="Car and motorcycle rental page1.htm" class="level-2">Car and motorcycle rental</a></li>
+                    <li><a href="Whisky distillery page1.htm" class="level-2">Whisky distillery</a></li>
+                    <li><a href="Bakery shop page1.htm" class="level-2">Bakery shop</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="Buy advertising page.htm" class="level-1">Buy advertising</a>
+                <ul>
+                    <li><a href="Rules page.htm" class="level-2">Rules</a></li>
+                    <li><a href="Price page.htm" class="level-2">Prices</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="Software and sources page.htm" class="level-1">Software and sources</a>
+            </li>
+        </ul>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Codefy 2025</p>
+    </footer>
+</body>
+</html>

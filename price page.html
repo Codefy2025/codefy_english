@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codefy - frontpage</title>
+    <style>
+        /* Reset some basic elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        /* Navigation bar styling */
+        .navbar {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            padding: 0 1rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+
+/* Ad Space Block Styles */
+        .ad-space1 {
+            width: 728px;
+            height: 90px;
+            background-color: #f8f8f8;
+            border: 1px dashed #ccc;
+            position: absolute;
+            /* These coordinates can be adjusted as needed to position the ad */
+            top: 75px;
+            left: 400px;
+            /* You can use any combination of top, bottom, left, right to position */
+            /* bottom: auto; */
+            /* right: auto; */
+            
+            /* Styles for the text/link */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+            /* Optional transition for hover effect */
+            transition: background-color 0.3s ease;
+        }
+        
+        .ad-space1:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .ad-link1 {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ad-link1:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+/* Ad Space Block Styles */
+        .ad-space2 {
+            width: 728px;
+            height: 90px;
+            background-color: #f8f8f8;
+            border: 1px dashed #ccc;
+            position: absolute;
+            /* These coordinates can be adjusted as needed to position the ad */
+            top: 1000px;
+            left: 400px;
+            /* You can use any combination of top, bottom, left, right to position */
+            /* bottom: auto; */
+            /* right: auto; */
+            
+            /* Styles for the text/link */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+            /* Optional transition for hover effect */
+            transition: background-color 0.3s ease;
+        }
+        
+        .ad-space2:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .ad-link2 {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ad-link2:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        /* Main content */
+        .content-section {
+            min-height: 80vh;
+            padding: 4rem 2rem;
+            /* Background image setup - replace with your own image path */
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/Hjemmeside_baggrund1_JPG_kontrast.jpg') center/cover no-repeat;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+ /* Fix image styling - make them work correctly */
+        img {
+            max-width: 100%; /* Ensure images don't overflow */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Individual image styles with correct properties */
+        .my-image1 {
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            width: 150px;
+            height: 150px;
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .table-container1 {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        table1 {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4285f4;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+td {
+color: black;
+}
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-container2 {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        table2 {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4285f4;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+td {
+color: black;
+}
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-container3 {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        table3 {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4285f4;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+td {
+color: black;
+}
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-container4 {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        table4 {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4285f4;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+td {
+color: black;
+}
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-container5 {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        table5 {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4285f4;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+td {
+color: black;
+}
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-container6 {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        table6 {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4285f4;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+td {
+color: black;
+}
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-container7 {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        table7 {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4285f4;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+td {
+color: black;
+}
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-container8 {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        table8 {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4285f4;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+td {
+color: black;
+}
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-container9 {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        table9 {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4285f4;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+td {
+color: black;
+}
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+.button1 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button1:hover {
+  background-color: #45a049;
+}
+
+.button2 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button2:hover {
+  background-color: #45a049;
+}       
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Codefy</div>
+        <ul class="nav-links">
+            <li><a href="Frontpage.htm">Home</a></li>
+            <li><a href="About me page.htm">About me</a></li>
+            <li><a href="Project page.htm">Project page</a></li>
+            <li><a href="Buy advertising page.htm">Buy advertising</a></li>
+            <li><a href="Software and sources page.htm">Software and sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+<div class="ad-space1">
+        <a href="Buy advertising page.htm" class="ad-link1">Want to advertise? Click here!</a>
+    </div>
+    <section class="content-section">
+        <div class="container">
+            <h1 class="section-title">Pricing</h1>
+<p>Last updated: May 11, 2025</p>
+            <p>Below you can see the current prices for the banners. The prices are not negotiable. I reserve the right to update these prices.</p>
+<p>Note: The prices in DKK are 25 % more expensive (because of VAT)</p>
+<p>Prices for frontpage</p>
+<img src="images/Priser for reklameplads.png" alt="Prices for advertising" class="my-image1">
+        </div>
+<div><a href="Dansk/Forside.htm" class="button1">Translate this page to Danish</a></div>
+<div><a href="HTML sitemap page.htm" class="button2">HTML sitemap</a></div>
+<div class="ad-space2">
+        <a href="Buy advertising page.htm" class="ad-link2">Want to advertise? Click here!</a>
+    </div>
+<div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Impressions/Prices in currencies</th>
+                    <th>$</th>
+                    <th>€</th>
+                    <th>¥</th>
+                    <th>£</th>
+                    <th>AU$</th>
+                    <th>DKK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>500 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+                <tr>
+                    <td>1.000 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<p>Prices for about me page</p>
+<div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Impressions/Prices in currencies</th>
+                    <th>$</th>
+                    <th>€</th>
+                    <th>¥</th>
+                    <th>£</th>
+                    <th>AU$</th>
+                    <th>DKK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>500 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+                <tr>
+                    <td>1.000 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<p>Prices for project page</p>
+<div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Impressions/Prices in currencies</th>
+                    <th>$</th>
+                    <th>€</th>
+                    <th>¥</th>
+                    <th>£</th>
+                    <th>AU$</th>
+                    <th>DKK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>500 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+                <tr>
+                    <td>1.000 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<p>Prices for all blog posts</p>
+<div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Impressions/Prices in currencies</th>
+                    <th>$</th>
+                    <th>€</th>
+                    <th>¥</th>
+                    <th>£</th>
+                    <th>AU$</th>
+                    <th>DKK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>500 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+                <tr>
+                    <td>1.000 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<p>Prices for buy advertising page</p>
+<div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Impressions/Prices in currencies</th>
+                    <th>$</th>
+                    <th>€</th>
+                    <th>¥</th>
+                    <th>£</th>
+                    <th>AU$</th>
+                    <th>DKK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>500 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+                <tr>
+                    <td>1.000 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<p>Prices for price page (this page)</p>
+<div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Impressions/Prices in currencies</th>
+                    <th>$</th>
+                    <th>€</th>
+                    <th>¥</th>
+                    <th>£</th>
+                    <th>AU$</th>
+                    <th>DKK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>500 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+                <tr>
+                    <td>1.000 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<p>Prices for rules page</p>
+<div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Impressions/Prices in currencies</th>
+                    <th>$</th>
+                    <th>€</th>
+                    <th>¥</th>
+                    <th>£</th>
+                    <th>AU$</th>
+                    <th>DKK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>500 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+                <tr>
+                    <td>1.000 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<p>Prices for HTML sitemap page</p>
+<div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Impressions/Prices in currencies</th>
+                    <th>$</th>
+                    <th>€</th>
+                    <th>¥</th>
+                    <th>£</th>
+                    <th>AU$</th>
+                    <th>DKK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>500 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+                <tr>
+                    <td>1.000 ad impressions</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Codefy 2025</p>
+    </footer>
+</body>
+</html>

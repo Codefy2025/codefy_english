@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codefy - frontpage</title>
+    <style>
+        /* Reset some basic elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        /* Navigation bar styling */
+        .navbar {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            padding: 0 1rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+
+/* Ad Space Block Styles */
+        .ad-space1 {
+            width: 728px;
+            height: 90px;
+            background-color: #f8f8f8;
+            border: 1px dashed #ccc;
+            position: absolute;
+            /* These coordinates can be adjusted as needed to position the ad */
+            top: 75px;
+            left: 400px;
+            /* You can use any combination of top, bottom, left, right to position */
+            /* bottom: auto; */
+            /* right: auto; */
+            
+            /* Styles for the text/link */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+            /* Optional transition for hover effect */
+            transition: background-color 0.3s ease;
+        }
+        
+        .ad-space1:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .ad-link1 {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ad-link1:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+/* Ad Space Block Styles */
+        .ad-space2 {
+            width: 728px;
+            height: 90px;
+            background-color: #f8f8f8;
+            border: 1px dashed #ccc;
+            position: absolute;
+            /* These coordinates can be adjusted as needed to position the ad */
+            top: 1000px;
+            left: 400px;
+            /* You can use any combination of top, bottom, left, right to position */
+            /* bottom: auto; */
+            /* right: auto; */
+            
+            /* Styles for the text/link */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+            /* Optional transition for hover effect */
+            transition: background-color 0.3s ease;
+        }
+        
+        .ad-space2:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .ad-link2 {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ad-link2:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        /* Main content */
+        .content-section {
+            min-height: 80vh;
+            padding: 4rem 2rem;
+            /* Background image setup - replace with your own image path */
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/Hjemmeside_baggrund1_JPG_kontrast.jpg') center/cover no-repeat;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+/* Fix image styling - make them work correctly */
+        img {
+            max-width: 100%; /* Ensure images don't overflow */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Individual image styles with correct properties */
+        .my-image1 {
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            width: 150px;
+            height: 150px;
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+ /* Custom Numbered List */
+        .custom-numbers {
+            list-style: none;
+            counter-reset: my-counter;
+            padding-left: 0;
+        }
+        
+        .custom-numbers li {
+            counter-increment: my-counter;
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .custom-numbers li:before {
+            content: counter(my-counter);
+            position: absolute;
+            left: 0;
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+        }
+
+.button1 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button1:hover {
+  background-color: #45a049;
+}
+
+.button2 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button2:hover {
+  background-color: #45a049;
+}
+    
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Codefy</div>
+        <ul class="nav-links">
+            <li><a href="Frontpage.htm">Home</a></li>
+            <li><a href="About me page.htm">About me</a></li>
+            <li><a href="Project page.htm">Project page</a></li>
+            <li><a href="Buy advertising page.htm">Buy advertising</a></li>
+            <li><a href="Software and sources page.htm">Software and sources</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+<div class="ad-space1">
+        <a href="Buy advertising page.htm" class="ad-link1">Want to advertise? Click here!</a>
+    </div>
+    <section class="content-section">
+        <div class="container">
+            <h1 class="section-title">Rules for advertising</h1>
+<p> Last updated: May 11, 2025</p>
+<h2>General guidelines for acceptable content</h2>
+<p>The website you are advertising CANNOT UNDER ANY CIRCUMSTANCES contain:</p>
+
+<ol class="custom-numbers">
+            <li>Piracy and unauthorized Content</li>
+            <p>Content related to pirated software, cracks, emulators, or unauthorized usage of copyrighted                     material.</p>
+            <li>Adult content</li>
+            <p>Including pornography, explicit sexual material, or any direct or indirect links to adult sites.</p>
+            <li>Illegal content</li>
+            <p>Content promoting or selling hazardous substances, illegal drugs, counterfeit products, weapons, or             any products/services that violate intellectual property rights, or break any laws.</p>
+            <li>Violence, gore, and harmful content</li>
+            <p>Content that depicts, promotes, or glorifies violence, death, gore, terrorism, or criminal             activity.</p>
+            <li>Hate speech and discrimination</li>
+            <p>Content that promotes or endorses racism, sexism, religious hate, gender discrimination, or other             forms of hate speech.</p>
+            <li>Profanity and offensive language</li>
+            <p>Content containing explicit language, slurs, or discriminatory/derogatory remarks against any                    individual or group.</p>
+            <li>Spammy content and non-comprehensible submissions</li>
+            <p>Submissions containing spam, gibberish (e.g., "nkejrbvkdn"), or content that doesn’t make sense will             be rejected immediately.</p>
+            <li>Misleading claims and "Too good to be true" offers</li>
+            <p>Content that includes false, unverifiable claims such as "earn a million dollars in three days with              little effort," or other deceptive advertising tactics.</p>
+            <li>Creatives containing misleading information</li>
+            <p>Ads with phrases like “your software is outdated,” “your device is infected,” or any other form of               misleading, alarmist, or deceptive claims will be rejected.</p>
+            <li>Malware, phishing, and harmful software</li>
+            <p>Ads that contain malware, phishing links, or any downloadable content that could damage or                       compromise a user's system.</p>
+            <li>Privacy and data protection violations</li>
+            <p>Ads must comply with applicable privacy laws (e.g., GDPR, CCPA) and must not collect personal data               without user consent.</p>
+            <li>Open content areas with inadequate moderation</li>
+            <p>Ads leading to forums, chat rooms, or user-generated content areas that lack sufficient moderation             to ensure compliance with these rules.</p>
+        </ol>
+<p>I reserve the right to update these guidelines as well as terminating any ad campaigns which does not comply with these rules (even after approval and on-going campaigns), with NO refunds and NO compensation for lost revenue.</p>
+<p>I use a 5-strike rule on ad buying requests (meaning if you break the rules 5 times, you WILL BE permabanned and will not be able to buy ad spaces anymore on my site). You WILL BE placed on a banned list.</p>
+<p>Please obey the rules, so we all can have a pleasant time on the blog :) </p>
+<!-- Fixed image elements with proper class names -->
+            <img src="images/Regler for køb af reklameplads.png" alt="Rules for buying ad space" class="my-image1">
+        </div>
+<div><a href="Dansk/Forside.htm" class="button1">Translate this page to Danish</a></div>
+<div><a href="HTML sitemap page.htm" class="button2">HTML sitemap</a></div>
+<div class="ad-space2">
+        <a href="Buy advertising page.htm" class="ad-link2">Want to advertise? Click here!</a>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Codefy 2025</p>
+    </footer>
+</body>
+</html>

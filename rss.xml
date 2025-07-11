@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <item>
+  <title>Car and motorcycle rental</title>
+  <link>https://Codefy.github.io/Codefy/Website English/Desktop/car and   motorcycle rental blog page1</link>
+  <language>en-us</language>
+  <description>How to build a car and motorcycle rental web application   in HTML/CSS/JavaScript and Python.</description>
+  <category>Programming</category>
+  <image>
+  <url>https://Codefy.github.io/Codefy/../Images/Bil og motorcykel udlejning.png</url>
+  <title>Car and motorcycle</title>
+  </image>
+  </item>
+<item>
+  <title>Whisky distillery</title>
+ <link>https://Codefy.github.io/Codefy/Website English/Desktop/whisky distillery blog page1</link>
+  <language>en-us</language>
+  <description>How to build a storage management system for a whisky distillery in Java.</description>
+  <category>Programming</category>
+  <image>
+  <url>https://codefy.github.io/codefy/../Images/Whisky destilleri.png</url>
+  <title>Whisky cask and bottle</title>
+  </image>
+  </item>
+<item>
+  <title>Bakery shop</title>
+<link>https://Codefy.github.io/Codefy/Website English/Desktop/bakery shop blog page1</link>
+<language>en-us</language>
+  <description>How to build a queuing system for a bakery shop in Golang.</description>
+  <category>Programming</category>
+  <image>
+  <url>https://codefy.github.io/codefy/../Images/Bageri.png</url>
+  <title>Bakery shop</title>
+  </image>
+  </item>
+</channel>
+</rss>

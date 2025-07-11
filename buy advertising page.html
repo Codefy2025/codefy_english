@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codefy - Buy advertising</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        .navbar {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            padding: 0 1rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+
+        .ad-space1 {
+            width: 728px;
+            height: 90px;
+            background-color: #f8f8f8;
+            border: 1px dashed #ccc;
+            position: absolute;
+            top: 20px;
+            left: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .ad-space1:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .ad-link1 {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ad-link1:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .ad-space2 {
+            width: 728px;
+            height: 90px;
+            background-color: #f8f8f8;
+            border: 1px dashed #ccc;
+            position: absolute;
+            top: 780px;
+            left: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .ad-space2:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .ad-link2 {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ad-link2:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .content-section {
+            min-height: 130vh;
+            padding: 4rem 2rem;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/Hjemmeside_baggrund1_JPG_kontrast.jpg') center/cover no-repeat;
+            color: white;
+            position: relative;
+        }
+    
+        .content-part1 {
+            position: absolute;
+            top: 145px;
+            left: 625px;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .content-part2 {
+            position: absolute;
+            top: 252px;
+            left: 205px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0px;
+            color: white;
+            font-size: 1.0rem;
+            margin-bottom: 5px;
+        }
+
+        .content-part3 {
+            position: absolute;
+            top: 260px;
+            left: 575px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0px;
+            color: white;
+            font-size: 1.0rem;
+            margin-bottom: 5px;
+        }
+
+        .content-part4 {
+            position: absolute;
+            top: 450px;
+            left: 225px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0px;
+            color: white;
+            font-size: 1.0rem;
+            margin-bottom: 5px;
+        }
+img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .my-image1 {
+            position: absolute;
+            top: 255px;
+            left: 50px;
+            width: 150px;
+            height: 150px;
+        }
+.button1 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button1:hover {
+  background-color: #45a049;
+}
+.button2 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button2:hover {
+  background-color: #45a049;
+}
+
+.button3 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button3:hover {
+  background-color: #45a049;
+}
+
+.button4 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button4:hover {
+  background-color: #45a049;
+}
+
+.form-container {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 10px;
+            position: absolute;
+            /* These can be adjusted as needed to position the form */
+            top: 800px;
+            left: 550px;
+            right: 50px;
+            bottom: auto;
+            width: 600px;
+        } 
+        .form-group {
+            margin-bottom: 1px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 1px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        
+        select {
+            height: 40px;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        .char-counter {
+            font-size: 12px;
+            color: #666;
+            text-align: right;
+            margin-top: 1px;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 1px;
+            display: none;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .file-upload {
+            margin-top: 2px;
+        }
+        
+        .file-upload-info {
+            font-size: 12px;
+            color: #666;
+            margin-top: 2px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Codefy</div>
+        <ul class="nav-links">
+            <li><a href="Frontpage.htm">Home</a></li>
+            <li><a href="About me page.htm">About me</a></li>
+            <li><a href="Project page.htm">Project page</a></li>
+            <li><a href="Buy advertising page.htm">Buy advertising</a></li>
+            <li><a href="Software and sources page.htm">Software and sources</a></li>
+        </ul>
+    </nav>
+    <section class="content-section">
+<div class="ad-space1">
+        <a href="Buy advertising page.htm" class="ad-link1">Want to advertise? Click here!</a>
+    </div>
+        <div class="content-part1">
+            <h1>Buy advertising</h1>
+             </div>      
+                <div class="content-part2">
+<p>Hi, do you need more views for your website?
+
+Then I can help you. Interested? Read the following and the two linked pages very carefully.
+
+I offer advertising on my blog via ad impressions/views (and not clicks/affiliate marketing).
+I can only offer leaderboard (728 x 90 px.) and medium rectangle (300 x 250 px.) banner advertising and only on the marked spaces on the page. 
+
+Then submitting the form at the bottom of this page, you agree to the price page (click button below) and the rules for advertising (click button below). Otherwise I will decline your request.</p>
+                </div> 
+                <div class="content-part3">
+                    <p>The progress:
+First please provide the following when submitting the form
+E-mail for communication
+Your country
+The ad space you are interested in (e.g. front-page top leaderboard, blog post about ... first medium rectangle banner etc.)
+The amount of ad impressions you are interessed in buying (500 or 1.000)
+The URL link for the website you want to advertise
+Website title
+A short description of the website advertised (between 155-260 characters)
+Attached image of banner in specified dimensions in either PNG or JPEG format
+
+If you forgot something/made an mistake (like wrong size/format of banner(s)) during submitting - don`t worry. Just resubmit.
+
+Next I will review your banners (there will be waiting time - 48 hours at most). 
+If I accept your request, I will send a payment request through Paypal. Soon after the payment has gone through (within 48 hours at most) I will add the banner(s) and start the ad campaign(s). If I reject I will send a e-mail containing reason for rejection.</p>
+                </div>
+            </div>
+            
+            <div class="content-part4">
+                <p>Be aware I may not able to run your ad campaign because ad impression events limit or someone requested the ad space first. In these cases you will be placed on a waiting list.
+Any questions? E-mail me at E-MAIL</p>
+            </div>
+            
+            <div class="image-container">
+                <img src="images/Køb af reklameplads.png" alt="Purchase of ad space" class="my-image1">
+            </div>
+<div><a href="Dansk/Køb reklameplads side.htm" class="button1">Rules for advertising</a></div>
+<div><a href="HTML sitemap page.htm" class="button2">Price lists</a></div>
+<div><a href="Dansk/Køb reklameplads side.htm" class="button3">Translate this page to Danish</a></div>
+<div><a href="HTML sitemap page.htm" class="button4">HTML sitemap</a></div>
+
+<div class="form-container">
+        <form id="adSpaceForm">
+            <div class="form-group">
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" placeholder="Enter your e-mail here" required>
+                <div id="emailError" class="error-message">Please enter a valid email address.</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="country">Country*</label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="adPlacement">Ad Placement*</label>
+                <select id="adPlacement" name="adPlacement" required>
+                    <option value="">Select ad placement</option>
+                    <option value="frontpage_top">Frontpage leaderboard top</option>
+                    <option value="frontpage_bottom">Frontpage leaderboard bottom</option>
+                    <option value="about_top">About me page leaderboard top</option>
+                    <option value="about_bottom">About me page leaderboard bottom</option>
+                    <option value="blog_top">Blog post leaderboard top</option>
+                    <option value="blog_rectangle">Blog post first medium rectangle</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="impressions">Ad Impressions*</label>
+                <select id="impressions" name="impressions" required>
+                    <option value="">Select impression package</option>
+                    <option value="500">500 impressions - $0.50</option>
+                    <option value="1000">1000 impressions - $1.00</option>
+                </select>
+            </div>
+            
+            <div class="form-group" id="bannerUploadGroup">
+                <label for="bannerUpload">Banner Upload*</label>
+                <div id="leaderboardInfo" class="file-upload-info">
+                    Please upload a JPEG/PNG banner (728 x 90 pixels)
+                </div>
+                <div id="rectangleInfo" class="file-upload-info hidden">
+                    Please upload a JPEG/PNG banner (300 x 250 pixels)
+                </div>
+                <input type="file" id="bannerUpload" name="bannerUpload" accept=".jpg,.jpeg,.png" class="file-upload" required>
+                <div id="fileError" class="error-message">Please upload a valid image file.</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="websiteURL">Website URL*</label>
+                <input type="url" id="websiteURL" name="websiteURL" placeholder="Enter the website URL here (e.g., https://example.com)" required>
+                <div id="websiteURLError" class="error-message">Please enter a valid website URL.</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="websiteName">Website Name*</label>
+                <input type="text" id="websiteName" name="websiteName" placeholder="Enter the website title here"  required>
+                <div id="websiteNameError" class="error-message">Website name cannot be empty.</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="websiteDescription">Website Description* (155-260 characters)</label>
+                <textarea id="websiteDescription" name="websiteDescription" placeholder="Enter a description of the website here" required></textarea>
+                <div class="char-counter"><span id="charCount">0</span>/260 characters</div>
+                <div id="descriptionError" class="error-message">Description must be between 155-260 characters.</div>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" id="submitBtn">Submit Ad Request</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Countries list
+        const countries = [
+            "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", 
+            "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", 
+            "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", 
+            "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", 
+            "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", 
+            "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", 
+            "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", 
+            "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", 
+            "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kosovo", "Kuwait", 
+            "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", 
+            "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", 
+            "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", 
+            "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway", "Oman", "Pakistan", 
+            "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", 
+            "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", 
+            "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", 
+            "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", 
+            "Suriname", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", 
+            "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", 
+            "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", 
+            "Yemen", "Zambia", "Zimbabwe"
+        ];
+
+        // Populate country dropdown
+        const countrySelect = document.getElementById('country');
+        countries.forEach(country => {
+            const option = document.createElement('option');
+            option.value = country;
+            option.textContent = country;
+            countrySelect.appendChild(option);
+        });
+
+        // Handle ad placement change
+        const adPlacementSelect = document.getElementById('adPlacement');
+        const leaderboardInfo = document.getElementById('leaderboardInfo');
+        const rectangleInfo = document.getElementById('rectangleInfo');
+
+        adPlacementSelect.addEventListener('change', function() {
+            const selectedValue = this.value;
+            
+            if (selectedValue.includes('rectangle')) {
+                leaderboardInfo.classList.add('hidden');
+                rectangleInfo.classList.remove('hidden');
+            } else {
+                leaderboardInfo.classList.remove('hidden');
+                rectangleInfo.classList.add('hidden');
+            }
+        });
+
+        // Character count for description
+        const descriptionTextarea = document.getElementById('websiteDescription');
+        const charCountSpan = document.getElementById('charCount');
+        const descriptionError = document.getElementById('descriptionError');
+
+        descriptionTextarea.addEventListener('input', function() {
+            const charCount = this.value.length;
+            charCountSpan.textContent = charCount;
+            
+            if (charCount < 155 || charCount > 260) {
+                descriptionError.style.display = 'block';
+            } else {
+                descriptionError.style.display = 'none';
+            }
+        });
+
+        // Form validation
+        const form = document.getElementById('adSpaceForm');
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+        const websiteURLInput = document.getElementById('websiteURL');
+        const websiteURLError = document.getElementById('websiteURLError');
+        const websiteNameInput = document.getElementById('websiteName');
+        const websiteNameError = document.getElementById('websiteNameError');
+        const fileInput = document.getElementById('bannerUpload');
+        const fileError = document.getElementById('fileError');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            
+            // Validate email
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(emailInput.value)) {
+                emailError.style.display = 'block';
+                isValid = false;
+            } else {
+                emailError.style.display = 'none';
+            }
+            
+            // Validate website URL
+            const urlPattern = /^(https?:\/\/)?(www\.)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/[a-zA-Z0-9-._~:/?#[\]@!$&'()*+,;=]*)?$/;
+            if (!urlPattern.test(websiteURLInput.value)) {
+                websiteURLError.style.display = 'block';
+                isValid = false;
+            } else {
+                websiteURLError.style.display = 'none';
+            }
+            
+            // Validate website name
+            if (websiteNameInput.value.trim() === '') {
+                websiteNameError.style.display = 'block';
+                isValid = false;
+            } else {
+                websiteNameError.style.display = 'none';
+            }
+            
+            // Validate description length
+            const descriptionLength = descriptionTextarea.value.length;
+            if (descriptionLength < 155 || descriptionLength > 260) {
+                descriptionError.style.display = 'block';
+                isValid = false;
+            } else {
+                descriptionError.style.display = 'none';
+            }
+            
+            // Validate file upload
+            if (!fileInput.files || fileInput.files.length === 0) {
+                fileError.style.display = 'block';
+                isValid = false;
+            } else {
+                fileError.style.display = 'none';
+                
+                // Here you would normally validate the image dimensions
+                // For demo purposes, we're just checking file type
+                const file = fileInput.files[0];
+                const fileType = file.type;
+                if (fileType !== 'image/jpeg' && fileType !== 'image/png') {
+                    fileError.textContent = 'Please upload a JPEG or PNG file.';
+                    fileError.style.display = 'block';
+                    isValid = false;
+                }
+            }
+            
+            if (isValid) {
+                // In a real implementation, this would send the form data to an email
+                // For demo purposes, we'll just show an alert
+                alert('Form submitted successfully! In a real implementation, this would send the data to an email.');
+                
+                // Here you would typically use a service like FormSubmit, EmailJS, or your own backend to handle the email sending
+                // Example with EmailJS or a similar service would go here
+            }
+        });
+
+        // Add real-time validation for Website URL
+        websiteURLInput.addEventListener('input', function() {
+            const urlPattern = /^(https?:\/\/)?(www\.)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/[a-zA-Z0-9-._~:/?#[\]@!$&'()*+,;=]*)?$/;
+            
+            if (!urlPattern.test(this.value)) {
+                websiteURLError.style.display = 'block';
+            } else {
+                websiteURLError.style.display = 'none';
+            }
+        });
+    </script>
+<div class="ad-space2">
+        <a href="Buy advertising page.htm" class="ad-link2">Want to advertise? Click here!</a>
+    </div>
+    </section>
+    <footer>
+        <p>&copy; Codefy 2025</p>
+    </footer>
+</body>
+</html>
