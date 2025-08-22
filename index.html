@@ -18,11 +18,11 @@
             background-color: #f4f4f4;
         }
         
-        .navbar {
+        .navbar-top {
             background-color: #333;
             color: white;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 1rem 2rem;
             position: sticky;
@@ -30,28 +30,75 @@
             z-index: 100;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .navbar-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
         }
         
-        .nav-links {
+        .nav-links-top {
             display: flex;
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
         
-        .nav-links li {
+        .nav-links-top li {
             padding: 0 1rem;
         }
         
-        .nav-links a {
+        .nav-links-top a {
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
         
-        .nav-links a:hover {
+        .nav-links-top a:hover {
+            color: #00bcd4;
+        }
+
+        .navbar-bottom {
+            background-color: #444;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 72px; /* Adjust based on top navbar height */
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-top: 1px solid #555;
+        }
+        
+        .nav-links-bottom {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+        
+        .nav-links-bottom li {
+            padding: 0 1rem;
+        }
+        
+        .nav-links-bottom a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .nav-links-bottom a:hover {
             color: #00bcd4;
         }
 
@@ -61,7 +108,7 @@
             background-color: #f8f8f8;
             border: 1px dashed #ccc;
             position: absolute;
-            top: 75px;
+            top: 200px;
             left: 400px;
             display: flex;
             justify-content: center;
@@ -97,7 +144,7 @@
             background-color: #f8f8f8;
             border: 1px dashed #ccc;
             position: absolute;
-            top: 1000px;
+            top: 1110px;
             left: 400px;
             display: flex;
             justify-content: center;
@@ -282,6 +329,46 @@
             position: absolute;
         }
 
+        .support-image {
+            top: 0px;
+            left: 40px;
+            width: 80px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .support-text {
+            top: 70px;
+            left: 0px;
+            font-size: 14px;
+            color: white;
+            max-width: 160px;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        .support-btn {
+            top: 110px;
+            left: -45px;
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .support-btn:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .support-btn img {
+            width: 250px;
+            height: 40px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
         .codefy-title {
             top: 0px;
             left: 50%;
@@ -380,27 +467,35 @@
             background-color: #45a049;
         }
 
-        }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Codefy</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about me page.html">About me</a></li>
-            <li><a href="project main page.html">Project page</a></li>
-            <li><a href="buy advertising page.html">Buy advertising</a></li>
-            <li><a href="software and sources page.html">Software and sources</a></li>
-            <li><a href="guest blog page.html">Guest blog posts</a></li>
-            <li><a href="sponsored blog page.html">Sponsored blog posts</a></li>
-            <li><a href="website statistics page.html">Website statistics</a></li>
-            <li><a href="dropshipping page.html">Dropshipping store</a></li>
-            <li><a href="feedback page.html">Feedback</a></li>
+    <nav class="navbar-top">
+        <div class="left-section">
+            <img src="../Images/Hjemmeside logo.png" alt="Codefy logo" class="navbar-logo">
+        </div>
+        <ul class="nav-links-top">
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="news page.htm">News</a></li>
+            <li><a href="about me page.htm">About me</a></li>
+            <li><a href="project main page.htm">Project page</a></li>
+            <li><a href="buy advertising page.htm">Buy advertising</a></li>
+            <li><a href="software and sources page.htm">Software and sources</a></li>
+        </ul>
+    </nav>
+
+    <nav class="navbar-bottom">
+        <ul class="nav-links-bottom">
+            <li><a href="guest blog page.htm">Guest blog posts</a></li>
+            <li><a href="sponsored blog page.htm">Sponsored blog posts</a></li>
+            <li><a href="website statistics page.htm">Website statistics</a></li>
+            <li><a href="dropshipping page.htm">Dropshipping store</a></li>
+            <li><a href="feedback page.htm">Feedback</a></li>
+            <li><a href="contest page.htm">Contests</a></li>
         </ul>
     </nav>
 <div class="ad-space1">
-        <a href="buy advertising page.html" class="ad-link1">Want to advertise? Click here!</a>
+        <a href="buy advertising page.htm" class="ad-link1">Want to advertise? Click here!</a>
     </div>
     <section class="content-section">
         <div class="container">
@@ -412,26 +507,32 @@
             So check the project page now!
             You can support me by sharing my website with your friends and family, by donating (see the footer), by buying ad space or just by visiting. Thank you for all your support!</p>
 
-            <img src="/codefy_english/images/Forvirret hoved.png" alt="Stuck developing?" class="my-image1">
-            <img src="/codefy_english/images/Ide.png" alt="Want ideas?" class="my-image2">
-            <img src="/codefy_english/images/Studerende.png" alt="Are you studying?" class="my-image3">
-            <img src="/codefy_english/images/Freelancer.png" alt="Are you freelancing?" class="my-image4">
-            <img src="/codefy_english/images/Webbrowser.png" alt="Develop web apps" class="my-image5">
-            <img src="/codefy_english/images/Bærbar pc.png" alt="Develop desktop software" class="my-image6">
-            <img src="/codefy_english/images/Smartphone.png" alt="Develop mobile apps" class="my-image7">
-            <img src="/codefy_english/images/Støtte af hjemmeside.png" alt="Want to support me?" class="my-image8">
+            <img src="../Images/Forvirret hoved.png" alt="Stuck developing?" class="my-image1">
+            <img src="../Images/Ide.png" alt="Want ideas?" class="my-image2">
+            <img src="../Images/Studerende.png" alt="Are you studying?" class="my-image3">
+            <img src="../Images/Freelancer.png" alt="Are you freelancing?" class="my-image4">
+            <img src="../Images/Webbrowser.png" alt="Develop web apps" class="my-image5">
+            <img src="../Images/Bærbar pc.png" alt="Develop desktop software" class="my-image6">
+            <img src="../Images/Smartphone.png" alt="Develop mobile apps" class="my-image7">
+            <img src="../Images/Støtte af hjemmeside.png" alt="Want to support me?" class="my-image8">
 </div>
 <div class="ad-space2">
-        <a href="buy advertising page.html" class="ad-link2">Want to advertise? Click here!</a>
+        <a href="buy advertising page.htm" class="ad-link2">Want to advertise? Click here!</a>
     </div>
     </section>
  <footer class="footer">
         <div class="footer-container">
+            <img src="../Images/Donationsbillede.png" alt="Tip jar" class="footer-element support-image">
+            <div class="footer-element support-text">Want to support me? Click the button below</div>
+            <a href="https://ko-fi.com/codefy" target="_blank" class="footer-element support-btn">
+                <img src="../Images/Ko-fi knap.png" alt="Support me button">
+            </a>
+
             <div class="footer-element codefy-title">Codefy 2025</div>
             <button class="footer-element translate-btn">Translate this page to Danish</button>
             <button class="footer-element sitemap-btn">HTML sitemap</button>
 
-            <img src="/codefy_english/images/Valg af skærmstørrelse.png" alt="Choose your screen size" class="my-image9">
+            <img src="../Images/Valg af skærmstørrelse.png" alt="Choose your screen size" class="my-image9">
             <div class="footer-element device-text">
                 Are you visiting my site using a phone or tablet?<br>
                 Click on the respective button to the right!
